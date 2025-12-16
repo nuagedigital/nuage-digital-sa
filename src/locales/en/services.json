@@ -1,0 +1,38 @@
+{
+  "hero_title": "Our Services",
+  "hero_subtitle": "At Nuage Digital, we provide a full suite of professional services that help businesses operate efficiently, remain compliant, and grow with confidence. Our multidisciplinary expertise ensures seamless support across every stage of your business journey.",
+  "cta": "Learn More",
+
+  "bookkeeping": {
+    "title": "Accounting & Assurance",
+    "desc": "Clear, compliant, and reliable accounting solutions that help you make confident business decisions.",
+    "cta": "Learn More"
+  },
+  "payroll": {
+    "title": "Advisory Services",
+    "desc": "Strategic, financial, and operational insight to help you plan, grow, and manage risk effectively.",
+    "cta": "Learn More"
+  },
+  "tax": {
+    "title": "Managed Services",
+    "desc": "Outsource key business functions for greater efficiency, lower costs, and exceptional performance.",
+    "cta": "Learn More"
+  },
+  "digital_media": {
+    "title": "HR Services",
+    "desc": "Seamless HR management — from payroll to compliance — handled with accuracy and care.",
+    "cta": "Learn More"
+  },
+  "consulting": {
+    "title": "Technology & Transformation",
+    "desc": "Smart, integrated technology solutions that streamline operations and power digital growth.",
+    "cta": "Learn More"
+  },
+  "hr": {
+    "title": "Human Resources",
+    "desc": "We offer comprehensive HR solutions from recruitment to performance management. We ensure a positive and productive work environment.",
+    "cta": "Learn More"
+  },
+
+  "trusted_by": "Trusted by leading companies"
+}

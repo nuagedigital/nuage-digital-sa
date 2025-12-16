@@ -1,0 +1,50 @@
+{
+  "hero_title": "Business Advisory",
+  "hero_subtitle": "We help businesses solve complex challenges by providing insights that inspire clarity and confidence. Our advisory team combines financial expertise, strategic insight, and deep understanding of both local and international markets to support sustainable growth and sound decision-making. Our services are designed for owners, investors, and management teams seeking objective insight into financial performance, operational efficiency, and strategic direction. Each engagement focuses on providing clarity — enabling decisions that are informed, timely, and aligned with your business objectives.",
+  "hero_button": "Services",
+
+  "reviews": {
+    "title": "Valuations",
+    "desc": "Whether you are entering the market to seek investors, looking for a settlement value for an insurance claim, or seeking a valuation for IFRS reporting, we provide accurate and independent assessments of your business’s worth to help stakeholders make informed decisions backed by robust analysis."
+  },
+
+  "business_strategy": {
+    "title": "Business Strategy",
+    "desc": "Our team of business leaders, with expertise across global markets, can help you realize your ambitions by defining objectives, assessing market dynamics, and building realistic plans for growth, diversification, or transformation."
+  },
+
+  "budgeting": {
+    "title": "Budgeting & Forecasting",
+    "desc": "Through disciplined financial planning, we help businesses manage resources efficiently, measure performance against goals, and adapt to changing conditions. Whether launching a new product, restructuring, or forecasting for the next financial year, our budgeting & forecasting services provide accuracy and reliability."
+  },
+
+  "due_care": {
+    "title": "Due Diligence",
+    "desc": "Our independent and thorough review of financial, operational, and regulatory risks associated with transactions helps identify potential issues, validate assumptions, and mitigate exposure, giving you greater confidence in every deal."
+  },
+
+  "tax_consulting": {
+    "title": "Tax Consulting",
+    "desc": "Efficient businesses rely on sound tax strategies and full regulatory compliance. We ensure your company adheres to VAT, ZATCA, customs, and other tax laws while optimizing your overall tax position — locally and internationally."
+  },
+
+  "Risk_Assessment": {
+    "title": "Risk Assessment & Restructuring",
+    "desc": "A structured approach to risk management and organizational restructuring helps businesses protect value and restore stability. We assist in reviewing business structures, identifying vulnerabilities, and designing frameworks that strengthen resilience and performance."
+  },
+
+  "Market_Intelligence": {
+    "title": "Market Intelligence & Risk Analysis",
+    "desc": "Access to accurate market intelligence is essential for informed decision-making in expansion and investment. Our research-driven, risk-based analysis helps you anticipate challenges, understand competition, and plan with confidence."
+  },
+
+  "Global_Mobility": {
+    "title": "Global Mobility",
+    "desc": "In a connected digital world, companies are hiring across borders to access top talent. Managing a global workforce involves complex regulatory challenges and tax exposures. Our Global Mobility experts help you navigate employment laws, double taxation, and corporate tax issues while ensuring compliance and cost-efficiency."
+  },
+
+  "Incorporation_Services": {
+    "title": "Incorporation Services",
+    "desc": "Whether entering the Saudi market for the first time, registering a new business, or expanding from the Kingdom to North America or Europe, our one-stop solution handles entity registration, compliance, market analysis, and HR management for a seamless setup."
+  }
+}

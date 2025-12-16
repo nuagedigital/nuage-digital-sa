@@ -1,0 +1,380 @@
+.bg-light {
+  background: #FFFDFA !important;
+  box-shadow: 0px 3px 25px 0px #0000000D;
+  z-index: 10;
+  position: relative;
+}
+
+
+body {
+  font-family: 'Zain', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Zain', sans-serif !important;
+}
+
+body, p{
+  font-family: 'Zain', sans-serif !important;
+  font-size: 16px !important;
+}
+
+
+/* ---map--- */
+
+
+.world-map-section {
+  background-color: #fffdfe;
+  position: relative;
+  box-shadow: 0px 3px 25px 0px #0000000d;
+}
+
+.custom-tooltip {
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff !important;
+  color: #000 !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px !important;
+  font-size: 14px;
+  direction: rtl;
+  text-align: right;
+}
+
+
+
+div#global-map {
+    height: 500px;
+}
+
+div#global-map svg{
+    height: 500px !important;
+}
+
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] body {
+  direction: ltr;
+  text-align: left;
+}
+
+
+.logos-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.logo-row {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-item {
+  padding: 0 20px;
+}
+
+/* Smooth infinite scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+Custom styles for the dropdown menu
+.navbar-nav .dropdown-menu {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .dropdown-item {
+  padding: 12px 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.navbar-nav .dropdown-item:focus {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.navbar-nav .dropdown-menu.show {
+  transform: translateY(10px);
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+h1#home_title {
+    background: #FFD734;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.card-body {
+  transition: transform 0.3s ease; /* Smooth transition for card body */
+}
+
+.card:hover .card-body {
+  transform: translateY(-5px); /* Lift the content slightly */
+}
+
+
+.hsfc-Step__Content {
+    padding: 0px !important;
+}
+
+.hsfc-FormWrapper label {
+    text-align: end;
+}
+
+
+.hsfc-FormWrapper input::placeholder {
+    color: #999;
+    font-style: italic;
+    text-align: end !important;
+}
+
+
+a.navbar-brand.fw-bold.text-dark.order-0 img {
+    width: 100%;
+    max-width: 70%;
+}
+
+.logo-item img {
+    width: 100%;
+    max-width: 67px;
+}
+
+.card-hover-green {
+  background-color: #ffffff; /* default card background */
+  padding: 10px;
+}
+
+.card-hover-green:hover {
+  background-color: #005430; /* green on hover */
+  color: #fff; /* default text color */
+}
+
+.card-hover-green:hover h5.card-title,
+.card-hover-green:hover p.card-text {
+  color: #fff !important; /* force text color to white */
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 25px;
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 9999;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.flag {
+  width: 40px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.big-box {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.big-box h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.dual-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.small-box {
+  width: 48%;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.small-box h3 {
+  font-size: 26px;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.location {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+
+@media(max-width:767px) {
+
+  a#brand-logo-link img {
+    width: 100%;
+    max-width: 200px;
+}
+
+div#global-map svg{
+  height: 500px !important;
+    position: relative;
+    top: -120px;
+}
+
+.card img {
+    height: auto !important;
+}
+
+.card img {
+    height: auto !important;
+}
+
+a#brand-logo-link,button.navbar-toggler {
+    margin-bottom: 1.5rem;
+}
+
+
+h1#home_title{
+  max-width: 100%;
+}
+  
+}
+
+
+body {
+    background: #fffdfb !important;
+}
+
+html[lang="en"] .bg-success .container {
+    padding-right: 2.5rem !important; /* change to your desired value */
+}
+
+
+/* ---------- DESKTOP: open dropdown on hover ---------- */
+@media (min-width: 768px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Generic dropdown tweaks */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+/* ---------- MOBILE: make dropdowns behave like an accordion ---------- */
+@media (max-width: 767.98px) {
+  /* In collapsed navbar, dropdowns should stack, not float */
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+    display: none; /* hidden by default */
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    display: block; /* React adds .show, we reveal it */
+  }
+}
+
+/* Optional RTL alignment for desktop dropdown */
+.dropdown-menu-rtl {
+  text-align: right;
+  right: 0 !important;
+  left: auto !important;
+}
+
+
+/* =========================
+   DESKTOP (hover)
+   ========================= */
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+.col-12.col-sm-6.col-md-4.col-lg-2.mb-4.d-flex {
+    padding: 6px !important;
+}
+
+.navbar-brand img {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.container.d-flex.justify-content-start.align-items-center.gap-2 {
+    padding-right: 33px;
+}
+
+.hsfc-Step__Banner{
+  display: none;
+}

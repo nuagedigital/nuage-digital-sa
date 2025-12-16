@@ -1,0 +1,18 @@
+
+{
+  "hero_title": "Managed Services",
+  "hero_subtitle": "Businesses are only as successful as their management functions. Building and managing teams of accountants, HR and other business functions can often distract business leaders from what they do best: innovation, sales, and customer service. With Nuage Digital Managed Services, you can free yourself from the pain by outsourcing your entire business functions to us, and it is our promise that we will run your operations with the same commitment as your own team, whilst bringing our industry experience, deep technical knowhow and professionalism to the game. ",
+  "hero_button": "Services",
+  "hr": {
+    "title": "HR Function Outsourcing",
+    "desc": "We manage HR processes from end to end, ensuring compliance, accuracy, and confidentiality. Our HR managed services include payroll, expenses management, human capital development (training), and Qiwa platform administration. We streamline employee management, reduce administrative burden, and help maintain compliance with Saudi labour regulations."
+  },
+  "accounting": {
+    "title": "Accounting Function Outsourcing",
+    "desc": "We offer full outsourcing of accounting functions, providing professional oversight across financial operations. Our team of highly trained professionals will ensure that your books are prepared to the highest standards of accuracy, your accounts payable, accounts receivable, and billing are managed proactively to enhance your working capital, and your VAT, ZATCA and income tax filings are taken care of seamlessly. With decades of experience working with the largest brands in the world, we have the knowhow to supercharge your business ambitions by handling all of your accounting needs and providing accurate and insightful reporting to help you take those big decisions."
+  },
+  "bpo": {
+    "title": "Business Process Outsourcing (BPO)",
+    "desc": "Our BPO services handle the operational activities that keep your business running smoothly.We provide call centre and billing services, along with tailored back-office support designed to meet your operational needs. Whether you require process efficiency, cost reduction, or improved customer experience, we deliver consistent quality through disciplined execution and reliable service delivery. Partner with us to streamline your business operations through efficient, cost-effective, and expertly managed outsourcing solutions"
+  }
+}

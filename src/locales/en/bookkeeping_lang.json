@@ -1,0 +1,51 @@
+{
+  "hero_title": "Accounting & Assurance Services",
+  "hero_subtitle": "At Nuage Digital, we understand that reliable accounting is the backbone of good business decisions. We combine deep industry expertise with technical skill and practical insight to help our clients stay compliant, confident, and in control of their financial performance. Whether you are a Director of Finance of an established conglomerate, a CPA looking for assistance with your client’s needs, or the founder of a new and exciting start-up, we are here to help you!",
+  "hero_button": "Services",
+  "bookkeeping": {
+    "title": "Bookkeeping",
+    "desc": "Accurate and timely bookkeeping forms the foundation of sound financial management. We maintain organized, compliant, and up-to-date records that give you a clear view of your business performance and support every decision you make.",
+    "cta": "Service"
+  },
+  "payroll": {
+    "title": "Trial Balance",
+    "desc": "A precise trial balance is key to maintaining reliable financial data. We prepare and review your trial balances to ensure accuracy, consistency, and readiness for audits or internal reviews.",
+    "cta": "Service"
+  },
+  "tax": {
+    "title": "Financial Statement Preparation",
+    "desc": "From balance sheets to income statements and cash flow reports, we prepare financial statements that meet professional and regulatory standards. Our focus is on delivering clarity, reliability, and insights that drive business performance.",
+    "cta": "Service"
+  },
+  "digital_media": {
+    "title": "Working Capital Management",
+    "desc": "We provide structured solutions to optimize the working capital cycle, covering receivables, payables, and inventory. By aligning processes across vendors and customers, we strengthen liquidity, enhance cash flow visibility, and build financial stability for sustainable growth",
+    "cta": "Service"
+  },
+  "consulting": {
+    "title": "Financial Consulting",
+    "desc": "We offer expert financial advice to help you improve your business strategy and financial performance.",
+    "cta": "Service"
+  },
+  "hr": {
+    "title": "VAT",
+    "desc": "Our VAT specialists ensure full compliance with Saudi VAT laws and ZATCA requirements. We assist with registration, filing, reconciliation, and advisory, reducing risks and ensuring smooth operations.",
+    "cta": "Service"
+  },
+
+  "hr1": {
+    "title": "ZATCA Compliance",
+    "desc": "Our experts help you stay fully aligned with ZATCA regulations, including e-invoicing and tax reporting. We simplify the process, ensuring your submissions are correct, timely, and compliant with the latest standards.",
+    "cta": "Service"
+  },
+
+    "hr2": {
+    "title": "Income Tax",
+    "desc": "We manage corporate income tax calculations, filings, and compliance in line with Saudi tax law. Our experts help minimize risk, identify opportunities, and ensure complete transparency with the authorities.",
+    "cta": "Service"
+  },
+
+  "partners": {
+    "title": "Our Partners"
+  }
+}

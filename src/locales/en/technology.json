@@ -1,0 +1,46 @@
+{
+  "hero_title": "Technology & Transformation",
+  "hero_subtitle": "In today’s digital economy, technology is central to business success. Our Technology & Transformation services help organisations modernise their systems, automate processes, and enhance customer engagement, all the while improving efficiency and reducing operational complexity. We bring together technical expertise and business understanding to deliver solutions that are practical, scalable, and aligned with your strategic goals.",
+  "hero_button": "Services",
+
+  "digital_reporting": {
+    "title": "ERP Integration & Migration",
+    "desc": "End-to-end integration and migration of ERP systems to ensure unified data, efficient operations, and seamless business performance."
+  },
+
+  "automation": {
+    "title": "POS Integration",
+    "desc": "Connecting your point-of-sale systems with accounting, inventory, and reporting tools for real-time insight and smoother transactions."
+  },
+
+  "cloud_accounting": {
+    "title": "CRM",
+    "desc": "Implementation and optimisation of customer relationship management systems to strengthen sales processes, service delivery, and client engagement."
+  },
+
+  "erp_integration": {
+    "title": "eCommerce Solutions",
+    "desc": "Design and integration of secure, scalable eCommerce platforms that connect seamlessly with your accounting, inventory, and CRM systems."
+  },
+
+  "ai_insights": {
+    "title": "Task Automation",
+    "desc": "Automation of repetitive tasks to improve accuracy, reduce manual effort, and free up time for higher-value work."
+  },
+
+  "ai_insights1": {
+    "title": "AI Development & Integration",
+    "desc": "Custom AI solutions designed to enhance decision-making, streamline operations, and create intelligent business processes."
+  },
+
+  "ai_insights2": {
+    "title": "Call Centre Services",
+    "desc": "Technology-enabled customer support solutions that deliver efficient, responsive, and professional client interactions."
+  },
+
+   "ai_insights3": {
+    "title": "Billing Services",
+    "desc": "Automated billing and invoicing systems to ensure accuracy, transparency, and timely cash flow management. Partner with us to transform your business through smart, integrated technology solutions that deliver efficiency, insight, and sustainable growth."
+  }
+
+}

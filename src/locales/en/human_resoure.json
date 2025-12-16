@@ -1,0 +1,22 @@
+{
+  "hero_title": "Human Resource Services",
+  "hero_subtitle": "Effective HR management is vital to building a compliant, motivated, and high-performing workforce. Our HR Services streamline your people operations — from payroll and expenses to compliance and capability development — so your business can focus on growth.",
+  "hero_button": "Services",
+  "salaries": {
+    "title": "Payroll",
+    "desc": "Accurate, timely, and fully compliant payroll processing, ensuring your employees are paid correctly with compliance with the payroll regulations."
+  },
+  "expenses": {
+    "title": "Expenses Management",
+    "desc": " Streamlined reimbursement and cost control systems that improve transparency and financial oversight."
+  },
+  "hcd": {
+    "title": "Human Capital Development",
+    "desc": " Structured programmes to enhance skills, strengthen leadership, and align people with business goals."
+  },
+  
+  "qiwa": {
+    "title": "Qiwa",
+    "desc": " End-to-end administration of Qiwa platform requirements, maintaining compliance and accuracy in all workforce records.Partnering with Nuage Digital for HR services ensures your people operations are handled with precision, professionalism, and care. We combine deep regulatory understanding with practical expertise to deliver reliable support that keeps your workforce compliant, engaged, and ready to perform."
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "global": "Global",
+  "login": "Login",
+  "switch_to_arabic": "Switch to Arabic",
+  "switch_to_english": "Switch to English",
+  "services": "Services",
+  "Accounting & Assurance Services": "Accounting & Assurance",
+  "Consulting Services with Advisory": "Consulting Services with Advisory",
+  "Managed Services": "Managed Services",
+  "Technology and transformation": "Technology and Transformation",
+  "Human Resource Services": "Human Resource Services",
+  "contact": "Contact Us",
+
+"home": {
+  "title": "  Your Global Growth Partners",
+  "subtitle": "United States · United Kingdom · Saudi Arabia · Pakistan",
+  "cta": "Nuage Digital Launch in Saudi Arabia"
+},
+
+  "map": {
+    "usa": {
+      "name": "United States",
+      "flagUrl": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/us.svg",
+      "info": "Clients: 100+",
+      "location": "California - Bay Area"
+    },
+    "gbr": {
+      "name": "United Kingdom",
+      "flagUrl": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg",
+      "info": "Partners: 500+",
+      "location": "Tax Advisory Partner"
+    },
+    "sau": {
+      "name": "Saudi Arabia",
+      "flagUrl": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/sa.svg",
+      "info": "Major Project Partnerships",
+      "location": "Building bridges between the USA and Saudi Arabia"
+    },
+    "pak": {
+      "name": "Pakistan",
+      "flagUrl": "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/pk.svg",
+      "info": "Active Branches: 30+",
+      "location": "Service Center"
+    }
+  },
+
+  "about": {
+    "title": "About Us",
+    "description": "Nuage Digital is a professional services firm bringing international experience and technical capability to the Saudi market. With roots in the US and UK, we support organisations through company setup, ongoing management, accounting, advisory, and technology-enabled outsourcing services. Our unified approach strengthens compliance, improves operational efficiency, and provides the clarity leaders need to run their businesses with confidence whether they are entering the Saudi market for the first time or seeking to enhance their existing operations.",
+    "button": "Contact Us",
+    "imageAlt": "Company Image"
+  },
+
+"servicesSection": {
+  "title": "Our Services",
+  "card1": {
+    "title": "Accounting",
+    "text": "Providing accounting and auditing services at the highest quality standards to maintain financial integrity."
+  },
+  "card2": {
+    "title": "Advisory",
+    "text": "Expert advisory services to guide your business toward growth and compliance."
+  },
+  "card3": {
+    "title": "Managed Services",
+    "text": "Comprehensive managed solutions to optimize your business operations efficiently."
+  },
+  "card4": {
+    "title": "Human Resources Services",
+    "text": "Complete HR management and compliance with Saudi labor laws."
+  },
+  "card5": {
+    "title": "Technology and Transformation",
+    "text": "Driving digital transformation and implementing innovative technology solutions."
+  }
+},
+
+  "financialSolutions": {
+    "title": "Exceptional Financial Solutions Designed for Success",
+    "subtitle": "Empower your company with strategies for long-term growth.",
+    "cta": "Get Started",
+    "card1": {
+      "title": "Accounting and Payroll",
+      "text": "We simplify your financial operations with our integrated accounting and payroll services. Using advanced technology, we automate routine tasks, ensuring accurate data entry and efficient payroll management. Our precise approach keeps your financial records up-to-date and compliant with regulations, while our team provides personalized support for any inquiries — letting you focus on growing your business."
+    },
+    "card2": {
+      "title": "Accounting and Auditing",
+      "text": "We offer innovative solutions for managing accounting and auditing operations according to global standards. Our goal is to ensure full compliance and transparency while maintaining operational efficiency and reliability."
+    },
+    "card3": {
+      "title": "Payroll Management",
+      "text": "Comprehensive payroll management and detailed reporting to ensure compliance and operational excellence. We handle everything from salary processing to employee benefits with precision and confidentiality."
+    }
+  },
+
+  "businessSolutions": {
+    "title": "Business Solutions",
+    "subtitle": "We provide integrated financial and technological services to support your business and achieve sustainable growth.",
+    "cta": "Discover More",
+    "imageAlt": "Business Dashboard",
+    "card1": {
+      "title": "Business Dashboards",
+      "text": "Interactive dashboards that allow you to monitor your business performance in real time."
+    },
+    "card2": {
+      "title": "Revenue Segregation",
+      "text": "Easily separate revenues and financial operations to simplify and optimize your business processes."
+    },
+    "card3": {
+      "title": "Website Appeal",
+      "text": "Our website design reflects elegance and professionalism in delivering financial services and solutions."
+    }
+  },
+
+  "partnerLogos": {
+    "title": "Companies That Trusted Us"
+  },
+
+  "contactus": {
+    "book_appointment": "Book an Appointment",
+    "send_message": "Send Us a Message!",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "service": "Service",
+    "message": "Message",
+    "protected_by_recaptcha": "Protected by reCAPTCHA",
+    "submit": "Submit",
+    "get_more_info": "Get More Information",
+    "trusted_by": "Trusted by Regional Companies"
+  },
+
+ "Footer": {
+  "all_rights_reserved": "All rights reserved.",
+  "privacy_policy": "Privacy Policy",
+  "company_name": "Nuage Digital"
+}
+
+} 
