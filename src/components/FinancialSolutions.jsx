@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom"; // ✅ Add Link
 
-import graphImage from "../assets/images/Group.jpg";
-import documentImage from "../assets/images/Group-1000001759.jpg";
+import graphImage from "../assets/images/dashboard.jpg";
+import graphImage1 from "../assets/images/accounting_banner.png";
+import documentImage from "../assets/images/Technology.png";
 
 export default function FinancialSolutions() {
   const { t } = useTranslation();
@@ -47,6 +48,7 @@ export default function FinancialSolutions() {
                   style={{
                     width: "470px",
                     height: "400px",
+                    objectFit:"contain",
                     borderRadius: "0.25rem",
                   }}
                 />
@@ -88,7 +90,10 @@ export default function FinancialSolutions() {
                   alt={t("financialSolutions.card2.title")}
                   className="img-fluid"
                   style={{
-                    height: "300px",
+                    width: "470px",
+                    height: "500px",
+                    objectFit:"contain",
+                    borderRadius: "0.25rem",
                   }}
                 />
               </div>
@@ -125,12 +130,13 @@ export default function FinancialSolutions() {
               {/* Image */}
               <div className="col-12 col-md-5">
                 <img
-                  src={graphImage}
+                  src={graphImage1}
                   alt={t("financialSolutions.card3.title")}
                   className="img-fluid"
                   style={{
                     width: "470px",
                     height: "400px",
+                    objectFit:"contain",
                     borderRadius: "0.25rem",
                   }}
                 />
