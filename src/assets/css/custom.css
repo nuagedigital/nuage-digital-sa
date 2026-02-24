@@ -397,3 +397,9 @@ html[lang="en"] .bg-success .container {
 .hsfc-Step__Banner{
   display: none;
 }
+
+
+.logo-item:hover img {
+  filter: grayscale(0%) !important;
+  transform: scale(1.08);
+}
