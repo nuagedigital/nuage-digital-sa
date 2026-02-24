@@ -63,27 +63,46 @@ html[dir="ltr"] body {
 }
 
 
+/* Container for the logos */
 .logos-marquee {
   overflow: hidden;
-  white-space: nowrap;
+  position: relative;
 }
 
+/* Make sure the row of logos is placed horizontally */
 .logo-row {
   display: flex;
-  animation: scroll 20s linear infinite;
+  flex-wrap: nowrap;
+  animation: slide 20s linear infinite;
 }
 
-.logo-item {
-  padding: 0 20px;
-}
-
-/* Smooth infinite scrolling animation */
-@keyframes scroll {
+/* Animation for the carousel */
+@keyframes slide {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Style for each logo item */
+.logo-item {
+  display: inline-block;
+  margin-right: 50px; /* Adjust the space between logos */
+  padding: 10px; /* Adjust padding for logos */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .logo-item {
+    margin-right: 30px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    margin-right: 20px; /* Adjust for mobile screens */
   }
 }
 
