@@ -8,7 +8,7 @@ export default function Footer() {
   const isRTL = i18n.language === "ar";
 
   return (
-    <footer className="bg-light py-4 border-top mt-5">
+    <footer className="bg-light py-4 border-top mt-1">
       <div
         className={`container d-flex flex-column flex-md-row align-items-center justify-content-between ${
           isRTL ? "text-end" : "text-start"

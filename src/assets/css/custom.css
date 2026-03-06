@@ -89,25 +89,9 @@ html[dir="ltr"] body {
 /* Style for each logo item */
 .logo-item {
   display: inline-block;
-  margin-right: 50px; /* Adjust the space between logos */
-  padding: 10px; /* Adjust padding for logos */
-}
-
-/* Add responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .logo-item {
-    margin-right: 30px; /* Adjust for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-item {
-    margin-right: 20px; /* Adjust for mobile screens */
-  }
 }
 
 
-Custom styles for the dropdown menu
 .navbar-nav .dropdown-menu {
   border-radius: 0.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -294,6 +278,58 @@ a.navbar-brand.fw-bold.text-dark.order-0 img {
     max-width: 200px;
 }
 
+section.py-5 .container {
+    padding: 20px;
+}
+
+
+button.navbar-toggler {
+    outline: none;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+}
+
+button:focus:not(:focus-visible) {
+    border: none;
+    outline: none;
+}
+
+div#home_describe{
+  padding: 12px !important;
+}
+
+/* section#cs-banner-services {
+    padding-top: 6rem !important;
+} */
+
+div#home_describe {
+    box-shadow: none;
+    padding: 33px 20px 0px;
+}
+
+.slick-slider .px-4 {
+    padding: 6px !important;
+}
+
+section.home-section.py-5.text-center{
+  padding-top: 7rem !important;
+}
+
+
+nav.navbar.navbar-expand-lg.bg-light.py-3 {
+    height: 72px;
+}
+
+.d-block.d-md-none {
+    position: fixed;
+    width: 100%;
+    z-index: 99999999;
+}
+
 div#global-map svg{
   height: 500px !important;
     position: relative;
@@ -310,6 +346,7 @@ div#global-map svg{
 
 a#brand-logo-link,button.navbar-toggler {
     margin-bottom: 1.5rem;
+    margin-right:0px;
 }
 
 
@@ -355,6 +392,27 @@ html[lang="en"] .bg-success .container {
     box-shadow: none;
     display: none; /* hidden by default */
   }
+
+
+  ul.navbar-nav.text-center.w-100 {
+    padding: 0px;
+}
+
+.collapse.navbar-collapse.show {
+   box-shadow: 0 0 12px 0 #00000026;
+    padding: 10px 14px;
+    margin-top: -13px;
+    background-color: #F5F4F0;
+}
+
+button.navbar-toggler {
+    position: relative;
+}
+
+.container.d-flex.justify-content-between {
+    padding: 0px;
+}
+
 
   .navbar-nav .dropdown-menu.show {
     display: block; /* React adds .show, we reveal it */
@@ -402,4 +460,157 @@ html[lang="en"] .bg-success .container {
 .logo-item:hover img {
   filter: grayscale(0%) !important;
   transform: scale(1.08);
+}
+
+
+.btn-warning:hover {
+    background: #0e5e52;
+    border: 1px solid #0e5e52;
+    color: #fff;
+}
+
+
+section.py-5 .container {
+    padding: 40px;
+    background: #fffdfa !important;
+    box-shadow: 0 3px 25px 0 #0000000d;
+    position: relative;
+    border-radius: 20px;
+}
+
+div#cs-patrenlogo {
+    box-shadow: none;
+}
+
+
+
+
+/* General Slick Slider Styles */
+.slick-slider,
+.slick-list,
+.slick-track {
+  display: block;
+}
+
+.slick-slide > div {
+  display: flex;  /* helps when slide child collapses */
+  justify-content: center;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Optional: Styling for the logos to have space around them */
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.logo-item img {
+  max-height: 120px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(80%);  /* Optional: subtle grayscale effect */
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional: Hover effect for logo images */
+.logo-item:hover img {
+  filter: grayscale(0%); /* Remove grayscale effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .slick-slide > div {
+    flex: 1 0 25%; /* Adjust for 4 slides per row on larger tablets */
+  }
+}
+
+@media (max-width: 992px) {
+  .slick-slide > div {
+    flex: 1 0 33.33%; /* Adjust for 3 slides per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-slide > div {
+    flex: 1 0 50%; /* Adjust for 2 slides per row on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .slick-slide > div {
+    flex: 1 0 33.33%; /* Adjust for 3 slides per row on mobile */
+  }
+}
+
+/* Fix the issues of margin/padding for mobile and small devices */
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#cs-partnerlogos {
+  padding: 1rem 0 !important;
+}
+
+
+.map-country {
+  cursor: default;
+}
+
+.active-country {
+  cursor: pointer;
+}
+
+/* optional: smoother popup text */
+.country-popup {
+  font-family: inherit;
+  line-height: 1.25;
+}
+
+
+
+.logo-item img {
+    width: 100%;
+    max-width: 60% !important;
+    margin: 0 auto;
+}
+
+
+div#home_describe {
+    box-shadow: none;
+    padding: 6rem 0px 0px;
+}
+
+section#cs-services .container {
+    box-shadow: none;
+}
+
+section#cs-services {
+    padding: 6rem 0px 0px !important;
+}
+
+section#cs-banner-services .container {
+    box-shadow: none;
+}
+
+
+.d-none.d-md-block {
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+section#cs-banner-services {
+    padding-top: 7rem !important;
+}
+
+
+section#cs-banner-services .container {
+    box-shadow: none;
+    background-color: transparent !important;
 }

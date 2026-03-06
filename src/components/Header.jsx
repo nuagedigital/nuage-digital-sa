@@ -22,6 +22,11 @@ export default function Header() {
   const toggleServices = () => setIsServicesOpen((prev) => !prev);
   const toggleGlobal = () => setIsGlobalOpen((prev) => !prev);
 
+  const langBtnClass = (lang) =>
+    `fw-bold mx-1 d-flex align-items-center gap-1 text-decoration-none border-0 bg-transparent p-0 ${
+      i18n.language === lang ? "text-warning" : "text-dark"
+    }`;
+
   return (
     <>
       {/* ======================== MOBILE HEADER ======================== */}
@@ -31,7 +36,7 @@ export default function Header() {
           style={{
             backgroundColor: "#0E5E52",
             color: "white",
-            padding: "0.25rem 0"   // equivalent to py-1
+            padding: "0.25rem 0", // equivalent to py-1
           }}
         >
           <div className="container d-flex justify-content-start align-items-center gap-2">
@@ -47,10 +52,12 @@ export default function Header() {
               >
                 {t("global")}
                 <i
-                  className={`bi ${isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
-                    } ms-2`}
+                  className={`bi ${
+                    isGlobalOpen ? "bi-chevron-up" : "bi-chevron-down"
+                  } ms-2`}
                 ></i>
               </span>
+
               <ul className={`dropdown-menu ${isGlobalOpen ? "show" : ""}`}>
                 <li>
                   <a className="dropdown-item" href="https://nuage-digital.com/">
@@ -68,20 +75,19 @@ export default function Header() {
         </div>
 
         {/* Mobile navbar */}
-        <nav className="navbar navbar-expand-lg bg-light py-3">
+        <nav className="navbar navbar-expand-lg bg-light py-3 px-3">
           <div className="container d-flex justify-content-between">
-<Link
-  className="navbar-brand text-dark"
-  to="/"
-  id="brand-logo-link"
-  onClick={(e) => {
-    e.preventDefault(); // stop the router default behavior
-    window.location.href = "/"; // full reload
-  }}
->
-  <img src={activeLogo} alt="Brand Logo" height="35" />
-</Link>
-
+            <Link
+              className="navbar-brand text-dark"
+              to="/"
+              id="brand-logo-link"
+              onClick={(e) => {
+                e.preventDefault(); // stop the router default behavior
+                window.location.href = "/"; // full reload
+              }}
+            >
+              <img src={activeLogo} alt="Brand Logo" height="35" />
+            </Link>
 
             {/* Toggler */}
             <button
@@ -95,10 +101,11 @@ export default function Header() {
             </button>
 
             {/* Collapsed nav content */}
-            <div className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`}>
+            <div
+              className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`}
+            >
               <ul className="navbar-nav text-center w-100">
-
-                 {/* Home */}
+                {/* Home */}
                 <li className="nav-item mb-2">
                   <a
                     href="/"
@@ -124,27 +131,23 @@ export default function Header() {
 
                 {/* Language */}
                 <li className="nav-item d-flex align-items-center justify-content-center mx-2">
-                  <a
+                  <button
+                    type="button"
                     onClick={() => handleChangeLanguage("ar")}
-                    className={`fw-bold mx-1 d-flex align-items-center gap-1 text-decoration-none ${i18n.language === "ar" ? "text-warning" : "text-dark"
-                      }`}
-                    role="button"
+                    className={langBtnClass("ar")}
                   >
-                    {/* <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/sa.svg" width="18" height="18" /> */}
                     AR
-                  </a>
+                  </button>
 
                   <span className="fw-bold mx-1 text-muted">|</span>
 
-                  <a
+                  <button
+                    type="button"
                     onClick={() => handleChangeLanguage("en")}
-                    className={`fw-bold mx-1 d-flex align-items-center gap-1 text-decoration-none ${i18n.language === "en" ? "text-warning" : "text-dark"
-                      }`}
-                    role="button"
+                    className={langBtnClass("en")}
                   >
-                    {/* <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/us.svg" width="18" height="18" /> */}
                     EN
-                  </a>
+                  </button>
                 </li>
 
                 {/* SERVICES (mobile: CLICK) */}
@@ -157,25 +160,47 @@ export default function Header() {
                   >
                     {t("services")}
                     <i
-                      className={`bi ${isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
-                        } ms-2`}
+                      className={`bi ${
+                        isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
+                      } ms-2`}
                     ></i>
                   </span>
 
                   <ul className={`dropdown-menu ${isServicesOpen ? "show" : ""}`}>
-                    <li><Link className="dropdown-item" to="/services/accounting">{t("Accounting & Assurance Services")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/consulting">{t("Consulting Services with Advisory")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/manageservices">{t("Managed Services")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/technology">{t("Technology and transformation")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/human">{t("Human Resource Services")}</Link></li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/accounting">
+                        {t("Accounting & Assurance Services")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/consulting">
+                        {t("Consulting Services with Advisory")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/manageservices">
+                        {t("Managed Services")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/technology">
+                        {t("Technology and transformation")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/human">
+                        {t("Human Resource Services")}
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
                 {/* Contact */}
                 <li className="nav-item mt-2">
-                  <Link className="nav-link text-dark" to="/contact-us">{t("contact")}</Link>
+                  <Link className="nav-link text-dark" to="/contact-us">
+                    {t("contact")}
+                  </Link>
                 </li>
-
               </ul>
             </div>
           </div>
@@ -188,22 +213,39 @@ export default function Header() {
           style={{
             backgroundColor: "#0E5E52",
             color: "white",
-            padding: "0.25rem 0"   // equivalent to py-1
+            padding: "0.25rem 0", // equivalent to py-1
           }}
         >
           <div className="container d-flex justify-content-start align-items-center gap-2">
             <i className="bi bi-globe ms-2"></i>
 
             <div className="dropdown">
-              <span className="dropdown-toggle" role="button" style={{ cursor: "pointer" }}>
-                {t("global")}  <i
-                  className={`bi ${isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
-                    } ms-2`}
+              <span
+                className="dropdown-toggle"
+                role="button"
+                style={{ cursor: "pointer" }}
+                onClick={toggleGlobal}
+                aria-expanded={isGlobalOpen}
+              >
+                {t("global")}
+                <i
+                  className={`bi ${
+                    isGlobalOpen ? "bi-chevron-up" : "bi-chevron-down"
+                  } ms-2`}
                 ></i>
               </span>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="https://nuage-digital.com/">United States</a></li>
-                <li><a className="dropdown-item" href="https://nuage-digital.sa/">Saudi</a></li>
+
+              <ul className={`dropdown-menu ${isGlobalOpen ? "show" : ""}`}>
+                <li>
+                  <a className="dropdown-item" href="https://nuage-digital.com/">
+                    United States
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="https://nuage-digital.sa/">
+                    Saudi
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -211,28 +253,33 @@ export default function Header() {
 
         {/* Desktop navbar */}
         <nav className="navbar navbar-expand-lg bg-light py-3">
-          <div className={`container d-flex align-items-center justify-content-between ${i18n.language === "ar" ? "flex-row-reverse" : ""}`}>
-
-           {/* Logo */}
-<Link
-  className={`navbar-brand fw-bold text-dark ${
-    i18n.language === "ar" ? "order-2" : "order-0"
-  }`}
-  to="/"
-  onClick={(e) => {
-    e.preventDefault(); // Stop React Router from blocking reload
-    window.location.href = "/"; // Force full page reload
-  }}
->
-  <img src={activeLogo} alt="Brand Logo" height="35" />
-</Link>
-
+          <div
+            className={`container d-flex align-items-center justify-content-between ${
+              i18n.language === "ar" ? "flex-row-reverse" : ""
+            }`}
+          >
+            {/* Logo */}
+            <Link
+              className={`navbar-brand fw-bold text-dark ${
+                i18n.language === "ar" ? "order-2" : "order-0"
+              }`}
+              to="/"
+              onClick={(e) => {
+                e.preventDefault(); // Stop React Router from blocking reload
+                window.location.href = "/"; // Force full page reload
+              }}
+            >
+              <img src={activeLogo} alt="Brand Logo" height="35" />
+            </Link>
 
             <div className="collapse navbar-collapse show">
-              <ul className={`navbar-nav align-items-center ${i18n.language === "ar" ? "me-auto flex-row-reverse text-end" : "ms-auto"}`}>
-
-
-
+              <ul
+                className={`navbar-nav align-items-center ${
+                  i18n.language === "ar"
+                    ? "me-auto flex-row-reverse text-end"
+                    : "ms-auto"
+                }`}
+              >
                 <li className="nav-item mx-2">
                   <a
                     href="https://pulse.nuage-digital.com/en/sign-in"
@@ -246,52 +293,74 @@ export default function Header() {
 
                 {/* Language */}
                 <li className="nav-item d-flex align-items-center mx-2">
-                  <a
+                  <button
+                    type="button"
                     onClick={() => handleChangeLanguage("ar")}
-                    className={`fw-bold mx-1 d-flex align-items-center gap-1 text-decoration-none ${i18n.language === "ar" ? "text-warning" : "text-dark"}`}
-                    role="button"
+                    className={langBtnClass("ar")}
                   >
-                    {/* <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/sa.svg" width="18" height="18" /> */}
                     AR
-                  </a>
+                  </button>
 
                   <span className="fw-bold mx-1 text-muted">|</span>
 
-                  <a
+                  <button
+                    type="button"
                     onClick={() => handleChangeLanguage("en")}
-                    className={`fw-bold mx-1 d-flex align-items-center gap-1 text-decoration-none ${i18n.language === "en" ? "text-warning" : "text-dark"}`}
-                    role="button"
+                    className={langBtnClass("en")}
                   >
-                    {/* <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/us.svg" width="18" height="18" /> */}
                     EN
-                  </a>
+                  </button>
                 </li>
 
                 {/* SERVICES (desktop hover) */}
                 <li className="nav-item dropdown mx-2">
-
-                  <span className="nav-link dropdown-toggle fw-semibold text-dark">{t("services")}
-
+                  <span className="nav-link dropdown-toggle fw-semibold text-dark">
+                    {t("services")}
                     <i
-                      className={`bi ${isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
-                        } ms-2`}
+                      className={`bi ${
+                        isServicesOpen ? "bi-chevron-up" : "bi-chevron-down"
+                      } ms-2`}
                     ></i>
                   </span>
 
-
-                  <ul className={`dropdown-menu ${i18n.language === "ar" ? "dropdown-menu-rtl" : ""}`}>
-                    <li><Link className="dropdown-item" to="/services/accounting">{t("Accounting & Assurance Services")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/consulting">{t("Consulting Services with Advisory")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/manageservices">{t("Managed Services")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/technology">{t("Technology and transformation")}</Link></li>
-                    <li><Link className="dropdown-item" to="/services/human">{t("Human Resource Services")}</Link></li>
+                  <ul
+                    className={`dropdown-menu ${
+                      i18n.language === "ar" ? "dropdown-menu-rtl" : ""
+                    }`}
+                  >
+                    <li>
+                      <Link className="dropdown-item" to="/services/accounting">
+                        {t("Accounting & Assurance Services")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/consulting">
+                        {t("Consulting Services with Advisory")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/manageservices">
+                        {t("Managed Services")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/technology">
+                        {t("Technology and transformation")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/services/human">
+                        {t("Human Resource Services")}
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
                 <li className="nav-item mx-2">
-                  <Link className="nav-link fw-semibold text-dark" to="/contact-us">{t("contact")}</Link>
+                  <Link className="nav-link fw-semibold text-dark" to="/contact-us">
+                    {t("contact")}
+                  </Link>
                 </li>
-
               </ul>
             </div>
           </div>

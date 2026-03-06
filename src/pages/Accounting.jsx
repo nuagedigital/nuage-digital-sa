@@ -68,7 +68,7 @@ export default function Accounting() {
   return (
     <>
       {/* 🌟 Hero Section */}
-      <section className="py-5">
+      <section className="py-5" id="cs-services">
         <div className="container">
           <div
             className={`row align-items-center g-4 flex-column-reverse flex-lg-row ${
@@ -90,16 +90,17 @@ export default function Accounting() {
             </div>
 
             {/* Text */}
-            <div className={`col-12 col-lg-6 ${textAlign} ${textAlignLg}`}>
-              <h1 className="mb-3 display-5 fw-bold">{t("hero_title")}</h1>
-              <p className="lead mb-4">{t("hero_subtitle")}</p>
-              <Link
-                to="/services"
-                className="btn btn-warning btn-lg fw-bold px-4 py-2 rounded-pill"
-              >
-                {t("hero_button")} →
-              </Link>
-            </div>
+          {/* Text */}
+<div className={`col-12 col-lg-6 ${textAlign} text-center text-lg-${isRTL ? 'end' : 'start'}`}>
+  <h1 className="mb-3 display-5 fw-bold">{t("hero_title")}</h1>
+  <p className="lead mb-4">{t("hero_subtitle")}</p>
+  <Link
+    to="/services"
+    className="btn btn-warning btn-lg fw-bold px-4 py-2 rounded-pill"
+  >
+    {t("hero_button")} →
+  </Link>
+</div>
           </div>
         </div>
       </section>
@@ -137,11 +138,10 @@ export default function Accounting() {
                   />
                 </div>
 
-                {/* Content */}
-                <div className={`col-12 col-lg-8 ${textAlign} ${textAlignLg} px-3 px-md-5`}>
-                  <h3 className="h3 fw-bold mb-3">{service.title}</h3>
-                  <p className="text-muted mb-4 fs-5 lh-base">{service.desc}</p>
-                </div>
+                <div className={`col-12 col-lg-8 ${textAlign} text-center text-lg-${isRTL ? 'end' : 'start'} px-3 px-md-5`}>
+  <h3 className="h3 fw-bold mb-3">{service.title}</h3>
+  <p className="text-muted mb-4 fs-5 lh-base">{service.desc}</p>
+</div>
               </div>
             </div>
           </section>
@@ -149,7 +149,7 @@ export default function Accounting() {
       })}
 
       {/* 🤝 Partner Logos */}
-      <PartnerLogos />
+     <PartnerLogos id="partner-logos" />
     </>
   );
 }

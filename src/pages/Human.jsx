@@ -24,7 +24,7 @@ export default function Human() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-4">
+      <section className="py-5" id="cs-services">
         <div className="container">
           <div className="row align-items-center g-5">
 
@@ -54,8 +54,7 @@ export default function Human() {
               </Link>
             </div>
 
-           
-
+  
           </div>
         </div>
       </section>
@@ -95,10 +94,8 @@ export default function Human() {
       })}
 
       {/* Partners */}
-      <section className="py-5">
-        <div className="container">
-          <PartnerLogos />
-        </div>
+      <section className="py-5" id="cs-banner-services">
+       <PartnerLogos id="partner-logos" />
       </section>
     </>
   );

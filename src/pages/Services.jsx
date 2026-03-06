@@ -63,7 +63,7 @@ export default function Services() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-5">
+      <section className="py-5" id="cs-services">
         <div className="container">
           <div className="row d-flex">
 
@@ -133,7 +133,7 @@ export default function Services() {
       </section>
 
       {/* Partner Logos */}
-      <PartnerLogos />
+     <PartnerLogos id="partner-logos" />
     </>
   );
 }

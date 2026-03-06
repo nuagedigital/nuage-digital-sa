@@ -39,7 +39,7 @@ export default function ManageServices() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-3">
+      <section className="py-5" id="cs-services">
         <div className="container">
           <div className="row align-items-center g-4">
 
@@ -117,10 +117,8 @@ export default function ManageServices() {
       })}
 
       {/* Partners */}
-      <section className="py-5">
-        <div className="container">
-          <PartnerLogos />
-        </div>
+      <section className="py-5" id="cs-banner-services">
+        <PartnerLogos id="partner-logos" />
       </section>
     </>
   );

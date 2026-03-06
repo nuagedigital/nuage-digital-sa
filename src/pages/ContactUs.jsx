@@ -62,7 +62,7 @@ export default function BookAppointment() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-success text-white py-5 text-center">
+      <section className="bg-success text-white py-5 text-center" id="cs-banner-services">
         <div className="container">
           <h1 className="display-5 fw-bold">
             {t("book_appointment", "Book an Appointment")}
@@ -103,8 +103,18 @@ export default function BookAppointment() {
           </div>
         </div>
 
-        <PartnerLogos />
+       {/* <PartnerLogos id="partner-logos" /> */}
       </section>
+
+         {/* 🤝 Partner Logos Section */}
+              <section className="py-5" id="cs-banner-services">
+                <PartnerLogos id="partner-logos" />
+                {/* <div className="container">
+                  <PartnerLogos />
+                </div> */}
+              </section>
+
+
     </>
   );
 }

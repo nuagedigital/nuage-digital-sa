@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next"; // ✅ import translation hook
+import { useTranslation } from "react-i18next";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { feature } from "topojson-client";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
-// 🟡 Highlighted countries (with keys for i18n)
 const highlightedCountries = {
   USA: { key: "usa" },
   GBR: { key: "gbr" },
   SAU: { key: "sau" },
-  PAK: { key: "pak" }
+  PAK: { key: "pak" },
 };
 
-// 🟡 Numeric ISO → Alpha-3 Country Mapping
 const isoNumericToAlpha3 = {
-  840: "USA", // United States
-  826: "GBR", // United Kingdom
-  682: "SAU", // Saudi Arabia
-  586: "PAK", // Pakistan
+  840: "USA",
+  826: "GBR",
+  682: "SAU",
+  586: "PAK",
 };
 
 export default function WorldMap({ id = "world-map" }) {
-  const { t, i18n } = useTranslation(); // ✅ use translations
+  const { t, i18n } = useTranslation();
   const [geographies, setGeographies] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [popupPos, setPopupPos] = useState({ x: 0, y: 0 });
 
-  // ✅ Load map data
   useEffect(() => {
     fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
       .then((res) => res.json())
@@ -37,14 +35,66 @@ export default function WorldMap({ id = "world-map" }) {
       .catch((err) => console.error("Error loading map data:", err));
   }, []);
 
-  const handleCountryHover = (isoNumeric) => {
+  // ✅ keeps popup inside viewport (flip left/top when needed)
+  const getSafePos = (clientX, clientY) => {
+    const offset = 14;
+    const popupW = 280; // must match popup width
+    const popupH = 140; // approximate height (safe enough)
+    const margin = 10;
+
+    let x = clientX + offset;
+    let y = clientY + offset;
+
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    // If overflow right -> flip to left of cursor
+    if (x + popupW + margin > vw) {
+      x = clientX - popupW - offset;
+    }
+
+    // If overflow bottom -> move above cursor
+    if (y + popupH + margin > vh) {
+      y = clientY - popupH - offset;
+    }
+
+    // Clamp (final safety)
+    x = Math.max(margin, Math.min(x, vw - popupW - margin));
+    y = Math.max(margin, Math.min(y, vh - popupH - margin));
+
+    return { x, y };
+  };
+
+  const handleCountryHover = (isoNumeric, evt) => {
     const isoAlpha3 = isoNumericToAlpha3[isoNumeric];
     if (isoAlpha3 && highlightedCountries[isoAlpha3]) {
       setSelectedCountry(highlightedCountries[isoAlpha3]);
+      setPopupPos(getSafePos(evt.clientX, evt.clientY));
+    } else {
+      setSelectedCountry(null);
     }
   };
 
+  const handleMouseMove = (evt) => {
+    if (!selectedCountry) return;
+    setPopupPos(getSafePos(evt.clientX, evt.clientY));
+  };
+
   const handleMouseLeave = () => setSelectedCountry(null);
+
+  const popupStyle = {
+    position: "fixed",
+    left: popupPos.x,
+    top: popupPos.y,
+    backgroundColor: "#fff",
+    padding: "14px",
+    boxShadow: "0 4px 14px rgba(0,0,0,0.18)",
+    zIndex: 9999,
+    borderRadius: "10px",
+    width: "280px",
+    direction: i18n.language === "ar" ? "rtl" : "ltr",
+    pointerEvents: "none", // keep hover working
+  };
 
   return (
     <div
@@ -67,17 +117,24 @@ export default function WorldMap({ id = "world-map" }) {
               const isoAlpha3 = isoNumericToAlpha3[isoNumeric];
               const isHighlighted = highlightedCountries[isoAlpha3];
 
-              const className = isHighlighted ? "map-country active-country" : "map-country";
+              const className = isHighlighted
+                ? "map-country active-country"
+                : "map-country";
 
               return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   className={className}
-                  onMouseEnter={() => handleCountryHover(isoNumeric)}
+                  onMouseEnter={(e) => handleCountryHover(isoNumeric, e)}
+                  onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
                   data-tooltip-content={
-                    isHighlighted ? `${t(`map.${highlightedCountries[isoAlpha3].key}.name`)} - ${t(`map.${highlightedCountries[isoAlpha3].key}.info`)}` : ""
+                    isHighlighted
+                      ? `${t(`map.${highlightedCountries[isoAlpha3].key}.name`)} - ${t(
+                          `map.${highlightedCountries[isoAlpha3].key}.info`
+                        )}`
+                      : ""
                   }
                   style={{
                     default: {
@@ -119,55 +176,28 @@ export default function WorldMap({ id = "world-map" }) {
           fontSize: "14px",
           textAlign: "center",
           fontWeight: "500",
-          direction: i18n.language === "ar" ? "rtl" : "ltr", // ✅ auto RTL/LTR
+          direction: i18n.language === "ar" ? "rtl" : "ltr",
         }}
       />
 
-      {/* ✅ Popup with translated text */}
       {selectedCountry && (
-        <div
-          className="country-popup"
-          style={{
-            position: "fixed",
-            top: "20%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            backgroundColor: "#fff",
-            padding: "20px",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-            zIndex: 9999,
-            borderRadius: "8px",
-            width: "300px",
-            direction: i18n.language === "ar" ? "rtl" : "ltr",
-          }}
-        >
-          <span
-            onClick={handleMouseLeave}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-              fontSize: "18px",
-              fontWeight: "bold",
-              color: "#333",
-            }}
-          >
-            ×
-          </span>
-
-          <h5 className="country-name text-dark">
+        <div className="country-popup" style={popupStyle}>
+          <h5 style={{ margin: 0, color: "#111" }}>
             {t(`map.${selectedCountry.key}.name`)}{" "}
             <img
               src={t(`map.${selectedCountry.key}.flagUrl`)}
               alt={t(`map.${selectedCountry.key}.name`) + " Flag"}
-              style={{ width: "30px", height: "20px" }}
+              style={{ width: "30px", height: "20px", marginInlineStart: "8px" }}
             />
           </h5>
-          <p className="country-info">
+
+          <p style={{ margin: "8px 0 0" }}>
             <strong>{t(`map.${selectedCountry.key}.info`)}</strong>
           </p>
-          <p className="location text-muted">{t(`map.${selectedCountry.key}.location`)}</p>
+
+          <p style={{ margin: "6px 0 0", color: "#666" }}>
+            {t(`map.${selectedCountry.key}.location`)}
+          </p>
         </div>
       )}
     </div>

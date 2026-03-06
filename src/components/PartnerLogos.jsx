@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 
@@ -15,46 +15,37 @@ import engageIQLogo from "../assets/images/13.png";
 
 export default function PartnerLogos() {
   const { t } = useTranslation();
+  const sliderRef = useRef(null);
+
+  // Ensure slick slider recalculates after mounting
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (sliderRef.current) {
+        sliderRef.current.slickGoTo(0);
+      }
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const settings = {
     dots: false,              // clean look, no dots needed for continuous flow
     infinite: true,
-    speed: 6000,              // ← higher = slower, smoother continuous feel (try 4000–10000)
+    speed: 6000,              // higher = slower, smoother continuous feel
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,         // ← 0 = no pause, immediate next transition
-    pauseOnHover: true,       // still pause nicely on hover
-    pauseOnDotsHover: false,
-    arrows: false,            // hide arrows for pure auto marquee vibe (or keep true if you want manual control)
-    cssEase: "linear",        // ← crucial: constant speed, no easing in/out → true smooth scroll
+    autoplaySpeed: 1,         // set to 1 for smooth continuous scroll on mobile
+    pauseOnHover: true,
+    arrows: false,            // hide arrows for pure auto marquee vibe
+    cssEase: "linear",        // constant speed, no easing in/out
     draggable: true,          // allow swipe on touch
     swipeToSlide: true,
     responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1200, settings: { slidesToShow: 4 } },
+      { breakpoint: 992, settings: { slidesToShow: 3 } }, // 3 slides on tablet
+      { breakpoint: 768, settings: { slidesToShow: 3 } }, // 3 slides on mobile
+      { breakpoint: 576, settings: { slidesToShow: 3 } }, // 3 slides on smaller mobile devices
     ],
   };
 
@@ -71,12 +62,12 @@ export default function PartnerLogos() {
   const displayedLogos = [...logos, ...logos];
 
   return (
-    <div className="container py-5">
+    <div className="container py-5" id="cs-partnerlogos">
       <h3 className="display-5 text-center mb-5 fw-bold">
         {t("partnerLogos.title") || "Our Partners"}
       </h3>
 
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings}>
         {displayedLogos.map((logo, index) => (
           <div key={index} className="px-4"> {/* wider padding for breathing room */}
             <div
@@ -97,7 +88,7 @@ export default function PartnerLogos() {
                   maxHeight: "90px",
                   maxWidth: "100%",
                   objectFit: "contain",
-                  filter: "grayscale(80%)",          // optional: subtle look
+                  filter: "grayscale(80%)",  // optional: subtle look
                 }}
               />
             </div>

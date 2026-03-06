@@ -36,7 +36,7 @@ export default function Technology() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="py-4">
+      <section className="py-5" id="cs-services">
         <div className="container">
           <div className="row align-items-center g-5">
 
@@ -124,10 +124,8 @@ export default function Technology() {
       })}
 
       {/* PARTNERS SECTION */}
-      <section className="py-5">
-        <div className="container">
-          <PartnerLogos />
-        </div>
+      <section className="py-5" id="cs-banner-services">
+       <PartnerLogos id="partner-logos" />
       </section>
     </>
   );
